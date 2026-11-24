@@ -1,0 +1,498 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Robiul Kawser</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<style>
+/* Layout: 12-column editorial grid, flush-left grotesk type, drawings and renders set as numbered-by-studio plates.
+   One accent: a brick-red seal, used for the monogram, hover and focus only. */
+:root {
+  --paper: #E8E9E6;
+  --panel: #DCDDD9;
+  --ink: #14161A;
+  --ink-2: #464A4F;
+  --rule: #B7B9B5;
+  --seal: #AE3A27;
+  --band-bg: #14161A;
+  --band-fg: #E8E9E6;
+  --band-mute: #A3A7AB;
+  --band-rule: #3A3D41;
+  --band-seal: #E0553D;
+  --img-filter: none;
+  --f-body: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --f-jp: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+  --gutter: clamp(16px, 4vw, 56px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101113;
+    --panel: #1A1C1F;
+    --ink: #E7E8E5;
+    --ink-2: #A2A6AA;
+    --rule: #2D2F33;
+    --seal: #E0553D;
+    --band-bg: #1B1D20;
+    --band-fg: #E7E8E5;
+    --band-mute: #9A9EA2;
+    --band-rule: #34373B;
+    --img-filter: brightness(.9) contrast(1.03);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101113;
+  --panel: #1A1C1F;
+  --ink: #E7E8E5;
+  --ink-2: #A2A6AA;
+  --rule: #2D2F33;
+  --seal: #E0553D;
+  --band-bg: #1B1D20;
+  --band-fg: #E7E8E5;
+  --band-mute: #9A9EA2;
+  --band-rule: #34373B;
+  --img-filter: brightness(.9) contrast(1.03);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body.lb-open { overflow: hidden; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 60;
+  background: var(--paper);
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--seal); outline-offset: 3px; }
+.jp { font-family: var(--f-jp); font-weight: 400; letter-spacing: .04em; }
+
+.wrap {
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+
+/* Header */
+.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 500; font-size: .95rem; letter-spacing: .01em; }
+.seal {
+  display: inline-grid; place-items: center;
+  width: 28px; height: 28px;
+  background: var(--seal); color: #fff;
+  font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+}
+.nav { display: flex; gap: clamp(14px, 3vw, 32px); font-size: .9rem; }
+.nav a { color: var(--ink-2); padding-block: 4px; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+.nav a:hover { color: var(--ink); border-color: var(--seal); }
+
+/* Hero */
+.hero { padding-block: clamp(28px, 5vw, 64px) 0; row-gap: 0; }
+.hero-name {
+  grid-column: 1 / 8;
+  grid-row: 1;
+  font-size: clamp(3.6rem, 13.2vw, 12.5rem);
+  font-weight: 250;
+  line-height: .86;
+  letter-spacing: -.045em;
+  text-wrap: nowrap;
+}
+.hero-name span { display: block; }
+.hero-lead { grid-column: 1 / 7; grid-row: 2; align-self: end; padding-top: 2.5rem; max-width: 36rem; }
+.hero-role { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; font-weight: 500; font-size: 1rem; }
+.hero-role .jp { color: var(--ink-2); font-size: .9rem; }
+.hero-lead p.lead { margin-top: .9rem; font-size: clamp(1.15rem, 1.7vw, 1.45rem); line-height: 1.4; font-weight: 300; }
+.hero-fig { grid-column: 8 / 13; grid-row: 1 / 3; align-self: start; margin: 0; }
+.hero-fig a { display: block; background: var(--panel); }
+.hero-fig img { width: 100%; filter: var(--img-filter); }
+figcaption { font-size: .8125rem; line-height: 1.4; color: var(--ink-2); padding-top: .6rem; }
+.strip {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--ink);
+  padding-top: 1rem;
+}
+.strip dt { font-size: .8125rem; color: var(--ink-2); margin-bottom: .2rem; }
+.strip dd { margin: 0; font-size: .95rem; line-height: 1.45; }
+
+/* Section headings */
+.sec-h { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-top: 1px solid var(--ink); padding-top: .8rem; margin-bottom: 1.4rem; }
+.sec-h h2 { font-size: 1rem; font-weight: 500; }
+.sec-h .jp { color: var(--ink-2); font-size: .9rem; }
+.section { margin-top: clamp(4.5rem, 9vw, 8rem); scroll-margin-top: calc(60px + env(safe-area-inset-top, 0px)); }
+
+/* Index */
+.index-head, .row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: baseline; }
+.index-head { font-size: .8125rem; color: var(--ink-2); padding-bottom: .6rem; }
+.row { padding-block: 1.05rem; border-top: 1px solid var(--rule); transition: color .15s; position: relative; }
+.row:last-child { border-bottom: 1px solid var(--rule); }
+.row > :nth-child(1) { grid-column: 1 / 3; }
+.row > :nth-child(2) { grid-column: 3 / 7; }
+.row > :nth-child(3) { grid-column: 7 / 10; }
+.row > :nth-child(4) { grid-column: 10 / 13; }
+.index-head > :nth-child(1) { grid-column: 1 / 3; }
+.index-head > :nth-child(2) { grid-column: 3 / 7; }
+.index-head > :nth-child(3) { grid-column: 7 / 10; }
+.index-head > :nth-child(4) { grid-column: 10 / 13; }
+.row .code { font-size: .9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.row .name { font-size: clamp(1.35rem, 2.3vw, 2rem); line-height: 1.15; font-weight: 400; letter-spacing: -.01em; transition: color .15s; }
+.row .site, .row .prog { font-size: .9rem; line-height: 1.4; color: var(--ink-2); }
+.row:hover .name, .row:focus-visible .name { color: var(--seal); }
+.row .thumb { display: none; }
+.peek {
+  position: fixed; left: 0; top: 0; z-index: 40;
+  width: min(380px, 30vw); aspect-ratio: 4 / 3; object-fit: cover;
+  background: var(--panel);
+  pointer-events: none; opacity: 0; transition: opacity .15s;
+  filter: var(--img-filter);
+}
+.peek.on { opacity: 1; }
+@media (hover: none), (max-width: 899px) { .peek { display: none; } }
+
+/* Chapters */
+.chapter { margin-top: clamp(5rem, 10vw, 9rem); border-top: 2px solid var(--ink); padding-top: 1.1rem; scroll-margin-top: calc(56px + env(safe-area-inset-top, 0px)); }
+.ch-head { align-items: end; row-gap: 1.5rem; }
+.ch-title { grid-column: 1 / 9; }
+.ch-code { display: flex; gap: 12px; align-items: baseline; font-size: .9rem; color: var(--ink-2); margin-bottom: .9rem; }
+.ch-code .jp { font-size: .85rem; }
+.ch-title h2 { font-size: clamp(2.5rem, 7vw, 6.4rem); font-weight: 250; line-height: .95; letter-spacing: -.035em; }
+.ch-sub { margin-top: 1rem; font-size: 1.05rem; color: var(--ink-2); max-width: 34rem; }
+.facts { grid-column: 9 / 13; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .45rem 1.1rem; margin: 0; font-size: .875rem; line-height: 1.4; border-top: 1px solid var(--rule); padding-top: .8rem; }
+.facts dt { color: var(--ink-2); }
+.facts dd { margin: 0; }
+.ch-lead { margin-top: clamp(2rem, 4vw, 3.5rem); row-gap: 2rem; align-items: start; }
+.statement { grid-column: 1 / 6; display: grid; gap: 1.1rem; max-width: 34rem; font-size: 1.02rem; line-height: 1.65; }
+.statement p:first-child { font-size: 1.12rem; line-height: 1.55; }
+.lead-fig { grid-column: 6 / 13; margin: 0; }
+
+.grp-h {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  border-top: 1px solid var(--rule);
+  padding-top: .75rem; margin: clamp(2.5rem, 5vw, 4rem) 0 1.25rem;
+  font-size: .95rem; font-weight: 500;
+}
+.grp-h span { color: var(--ink-2); font-weight: 400; font-size: .85rem; }
+.plate { margin: 0 0 22px; break-inside: avoid; }
+.plate .open { display: block; width: 100%; padding: 0; border: 0; background: var(--panel); cursor: zoom-in; }
+.plate img { width: 100%; filter: var(--img-filter); transition: opacity .15s; }
+.plate .open:hover img { opacity: .93; }
+.masonry { column-count: 2; column-gap: 22px; }
+.stack { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 22px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 22px; align-items: start; }
+.stack .plate, .pair .plate { margin-bottom: 22px; }
+
+/* About */
+.about { row-gap: 2.5rem; align-items: start; }
+.portrait { grid-column: 1 / 5; margin: 0; }
+.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; background: var(--panel); }
+.about-text { grid-column: 6 / 13; display: grid; gap: 1.2rem; max-width: 46rem; }
+.about-text .intro { font-size: clamp(1.4rem, 2.5vw, 2.05rem); line-height: 1.3; font-weight: 300; letter-spacing: -.01em; }
+.about-text p { font-size: 1.05rem; line-height: 1.65; }
+.about-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 24px; margin-top: 1.4rem; }
+.about-cols h3 { font-size: .95rem; font-weight: 500; border-top: 1px solid var(--rule); padding-top: .7rem; margin-bottom: .6rem; }
+.about-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; font-size: .95rem; line-height: 1.45; }
+.about-cols p { font-size: .95rem; line-height: 1.5; }
+.ways { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem 24px; }
+.way h3 { font-size: 1rem; font-weight: 500; border-top: 1px solid var(--ink); padding-top: .8rem; margin-bottom: .55rem; }
+.way p { font-size: .93rem; line-height: 1.55; color: var(--ink-2); }
+
+/* Contact band */
+.contact { margin-top: clamp(5rem, 10vw, 9rem); background: var(--band-bg); color: var(--band-fg); padding-block: clamp(3rem, 7vw, 6rem) 0; scroll-margin-top: calc(56px + env(safe-area-inset-top, 0px)); }
+.contact .sec-h { border-top-color: var(--band-rule); }
+.contact .sec-h .jp { color: var(--band-mute); }
+.contact-grid { row-gap: 2rem; }
+.contact-lead { grid-column: 1 / 6; font-size: clamp(1.4rem, 2.5vw, 2.05rem); line-height: 1.3; font-weight: 300; letter-spacing: -.01em; }
+.crows { grid-column: 6 / 13; display: grid; }
+.crow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; padding-block: 1.1rem; border-top: 1px solid var(--band-rule); }
+.crow:last-child { border-bottom: 1px solid var(--band-rule); }
+.clabel { grid-column: 1 / -1; font-size: .8125rem; color: var(--band-mute); }
+.cval { font-size: clamp(1.25rem, 3.4vw, 2.5rem); font-weight: 250; letter-spacing: -.02em; line-height: 1.15; overflow-wrap: anywhere; transition: color .15s; }
+a.cval:hover { color: var(--band-seal); }
+.copy { background: none; border: 1px solid var(--band-rule); color: var(--band-fg); padding: 6px 14px; font-size: .85rem; cursor: pointer; transition: border-color .15s, color .15s; }
+.copy:hover { border-color: var(--band-seal); color: var(--band-seal); }
+.contact :focus-visible { outline-color: var(--band-seal); }
+.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-top: clamp(3rem, 6vw, 5rem); padding-block: 1.2rem calc(1.4rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--band-rule); font-size: .85rem; color: var(--band-mute); }
+.foot a:hover { color: var(--band-seal); }
+
+/* Lightbox */
+.lb {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8, 9, 10, .95);
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+  padding: calc(12px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  color: #E8E9E6;
+}
+.lb[hidden] { display: none; }
+.lb-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .85rem; color: #A9ADB1; padding-bottom: 8px; }
+.lb-btns { display: flex; gap: 8px; }
+.lb button { background: none; border: 1px solid #3C3F43; color: #E8E9E6; padding: 7px 14px; font-size: .85rem; cursor: pointer; }
+.lb button:hover { border-color: #E0553D; color: #E0553D; }
+.lb :focus-visible { outline-color: #E0553D; }
+.lb-stage { min-height: 0; display: grid; place-items: center; }
+.lb-stage img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; background: #fff; }
+.lb-cap { padding-top: 10px; font-size: .9rem; color: #D5D7D9; text-align: center; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 899px) {
+  .hero-name { grid-column: 1 / -1; font-size: clamp(4rem, 24vw, 9rem); }
+  .hero-lead { grid-column: 1 / -1; grid-row: 2; padding-top: 1.6rem; }
+  .hero-fig { grid-column: 1 / -1; grid-row: 3; margin-top: 2rem; }
+  .index-head { display: none; }
+  .row { grid-template-columns: minmax(0, 1fr) 76px; row-gap: 2px; align-items: start; }
+  .row > :nth-child(n) { grid-column: 1; }
+  .row .thumb { display: block; grid-column: 2; grid-row: 1 / 5; width: 76px; height: 76px; object-fit: cover; background: var(--panel); filter: var(--img-filter); }
+  .ch-title, .facts, .statement, .lead-fig { grid-column: 1 / -1; }
+  .facts { margin-top: .5rem; }
+  .portrait { grid-column: 1 / -1; max-width: 420px; }
+  .about-text { grid-column: 1 / -1; }
+  .contact-lead, .crows { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .masonry { column-count: 1; }
+  .pair { grid-template-columns: minmax(0, 1fr); }
+  .about-cols { grid-template-columns: minmax(0, 1fr); }
+  .ways { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .strip { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .nav { gap: 14px; font-size: .85rem; }
+  .brand span.n { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Robiul Kawser, back to top"><span class="seal" aria-hidden="true">RK</span><span class="n">Robiul Kawser</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero grid" aria-label="Introduction">
+    <h1 class="hero-name"><span>Robiul</span><span>Kawser</span></h1>
+    <div class="hero-lead">
+      <p class="hero-role"><span>Architectural designer</span><span class="jp" lang="ja">建築デザイナー</span></p>
+      <p class="lead">My work explores the relationship between people, spaces and the built environment, through contextual, community-oriented and sustainable design.</p>
+    </div>
+    <figure class="hero-fig">
+      <a href="#aangina" aria-label="Aangina, ARC 402"><img src="img/aangina-street.jpg" width="1653" height="1871" alt="Brick housing blocks along a pedestrian street, Aangina" loading="eager" fetchpriority="high" decoding="async"></a>
+      <figcaption>Aangina, Korail, Mohakhali. ARC 402</figcaption>
+    </figure>
+    <dl class="strip" style="grid-column: 1 / -1">
+      <div><dt>Education</dt><dd>Architecture, BRAC University, Dhaka</dd></div>
+      <div><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+      <div><dt>Interests</dt><dd>Contextual, sustainable and community-oriented design, urbanism, cultural and institutional buildings</dd></div>
+      <div><dt>Looking for</dt><dd>Internships and entry-level roles in architecture practices in Japan and abroad</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap section" id="work" aria-label="Selected work">
+    <div class="sec-h"><h2>Selected work</h2><span class="jp" lang="ja">作品</span></div>
+    <div class="index-head" aria-hidden="true"><span>Studio</span><span>Project</span><span>Site</span><span>Programme</span></div>
+    <nav class="index" aria-label="Projects"><a class="row" href="#aangina" data-img="img/aangina-street.jpg"><span class="code">ARC 402</span><span class="name">Aangina</span><span class="site">Korail, Mohakhali, Dhaka</span><span class="prog">Community-based housing with integrated livelihoods</span><img src="img/aangina-street.jpg" width="1653" height="1871" alt="" loading="lazy" decoding="async" class="thumb"></a><a class="row" href="#wellness" data-img="img/well-r3.jpg"><span class="code">ARC 501</span><span class="name">Wellness Centre at Gol Talab</span><span class="site">Gol Talab, Old Dhaka</span><span class="prog">Wellness centre in a historic urban context</span><img src="img/well-r3.jpg" width="1096" height="716" alt="" loading="lazy" decoding="async" class="thumb"></a><a class="row" href="#kaundia" data-img="img/kaundia-cover.jpg"><span class="code">ARC 401</span><span class="name">Water Urbanism at Kaundia</span><span class="site">Kaundia, Savar, Dhaka</span><span class="prog">Peri-urban master plan and a neighbourhood sports club</span><img src="img/kaundia-cover.jpg" width="1100" height="1580" alt="" loading="lazy" decoding="async" class="thumb"></a><a class="row" href="#sylvan" data-img="img/sylvan-hero.jpg"><span class="code">ARC 302</span><span class="name">Sylvan Skyscraper</span><span class="site">DNCC Market, Gulshan 1, Dhaka</span><span class="prog">High-rise</span><img src="img/sylvan-hero.jpg" width="1543" height="1944" alt="" loading="lazy" decoding="async" class="thumb"></a><a class="row" href="#studio-301" data-img="img/edu-r2.jpg"><span class="code">ARC 301</span><span class="name">Interpretation and Edutainment</span><span class="site">Lakshmipur; Mohakhali TB Gate</span><span class="prog">Nature interpretation centre and children&#x27;s edutainment centre</span><img src="img/edu-r2.jpg" width="640" height="359" alt="" loading="lazy" decoding="async" class="thumb"></a><a class="row" href="#interior" data-img="img/interior-2.jpg"><span class="code">Interior</span><span class="name">Café and Lounge Interior</span><span class="site"></span><span class="prog">Interior architecture</span><img src="img/interior-2.jpg" width="1653" height="925" alt="" loading="lazy" decoding="async" class="thumb"></a></nav>
+  </section>
+
+  <article class="chapter" id="aangina"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>ARC 402</span><span class="jp" lang="ja">中庭</span></p><h2>Aangina</h2><p class="ch-sub">Community-based housing with integrated livelihoods</p></div><dl class="facts"><dt>Studio</dt><dd>ARC 402</dd><dt>Site</dt><dd>Korail, Mohakhali, Dhaka</dd><dt>Setting</dt><dd>Urban water edge</dd><dt>Programme</dt><dd>Housing, community spaces, livelihood facilities</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>Aangina means courtyard in Bengali. This community-based housing complex sits on an urban water edge in Korail, Mohakhali, and brings housing, community space and livelihood facilities into one environment. The idea comes from the South Asian courtyard, a shared open space that becomes the social heart of a community, reinterpreted here as a network of linked courtyards between housing blocks.</p><p>Ground floors hold small workshops, shops and community halls to draw activity to street level. Upper floors step back for light, ventilation and views toward the water. The massing moved from a simple grid of solid blocks to the final courtyard arrangement, shaped by context, wind direction and views.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="Stepped seating at the water edge, with the housing blocks behind" aria-label="Enlarge: Stepped seating at the water edge, with the housing blocks behind"><img src="img/aangina-r-amphitheatre.jpg" width="1002" height="666" alt="Stepped seating at the water edge, with the housing blocks behind" loading="lazy" decoding="async"></button><figcaption>Stepped seating at the water edge, with the housing blocks behind</figcaption></figure></div><h3 class="grp-h">Renders</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Pedestrian street between two housing blocks" aria-label="Enlarge: Pedestrian street between two housing blocks"><img src="img/aangina-r-canyon.jpg" width="1000" height="666" alt="Pedestrian street between two housing blocks" loading="lazy" decoding="async"></button><figcaption>Pedestrian street between two housing blocks</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Daylight through a perforated brick screen" aria-label="Enlarge: Daylight through a perforated brick screen"><img src="img/aangina-r-jali.jpg" width="567" height="373" alt="Daylight through a perforated brick screen" loading="lazy" decoding="async"></button><figcaption>Daylight through a perforated brick screen</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Courtyard between blocks, with stepped-back upper floors" aria-label="Enlarge: Courtyard between blocks, with stepped-back upper floors"><img src="img/aangina-r-courtyard.jpg" width="567" height="375" alt="Courtyard between blocks, with stepped-back upper floors" loading="lazy" decoding="async"></button><figcaption>Courtyard between blocks, with stepped-back upper floors</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Planted terraces on the upper floors, looking toward the water" aria-label="Enlarge: Planted terraces on the upper floors, looking toward the water"><img src="img/aangina-r-aerial.jpg" width="560" height="570" alt="Planted terraces on the upper floors, looking toward the water" loading="lazy" decoding="async"></button><figcaption>Planted terraces on the upper floors, looking toward the water</figcaption></figure></div><h3 class="grp-h">Concept and site study</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="Concept: linked courtyards with open paths through the cluster" aria-label="Enlarge: Concept: linked courtyards with open paths through the cluster"><img src="img/aangina-concept.jpg" width="695" height="457" alt="Concept: linked courtyards with open paths through the cluster" loading="lazy" decoding="async"></button><figcaption>Concept: linked courtyards with open paths through the cluster</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Existing housing types, interior section and circulation observed in Korail" aria-label="Enlarge: Existing housing types, interior section and circulation observed in Korail"><img src="img/aangina-context.jpg" width="1267" height="845" alt="Existing housing types, interior section and circulation observed in Korail" loading="lazy" decoding="async"></button><figcaption>Existing housing types, interior section and circulation observed in Korail</figcaption></figure></div><h3 class="grp-h">Plans</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="Ground floor plan, with livelihood spaces around the courtyards" aria-label="Enlarge: Ground floor plan, with livelihood spaces around the courtyards"><img src="img/aangina-ground.jpg" width="1278" height="1621" alt="Ground floor plan, with livelihood spaces around the courtyards" loading="lazy" decoding="async"></button><figcaption>Ground floor plan, with livelihood spaces around the courtyards</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Typical floor plans" aria-label="Enlarge: Typical floor plans"><img src="img/aangina-typical.jpg" width="1351" height="1837" alt="Typical floor plans" loading="lazy" decoding="async"></button><figcaption>Typical floor plans</figcaption></figure></div><h3 class="grp-h">Sections</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Section AA&#x27;" aria-label="Enlarge: Section AA&#x27;"><img src="img/aangina-secAA.jpg" width="1606" height="515" alt="Section AA&#x27;" loading="lazy" decoding="async"></button><figcaption>Section AA&#x27;</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Section BB&#x27;" aria-label="Enlarge: Section BB&#x27;"><img src="img/aangina-secBB.jpg" width="1606" height="718" alt="Section BB&#x27;" loading="lazy" decoding="async"></button><figcaption>Section BB&#x27;</figcaption></figure></div><h3 class="grp-h">Elevations</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="North elevation" aria-label="Enlarge: North elevation"><img src="img/aangina-elN.jpg" width="1527" height="520" alt="North elevation" loading="lazy" decoding="async"></button><figcaption>North elevation</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="South elevation" aria-label="Enlarge: South elevation"><img src="img/aangina-elS.jpg" width="1527" height="514" alt="South elevation" loading="lazy" decoding="async"></button><figcaption>South elevation</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="West elevation" aria-label="Enlarge: West elevation"><img src="img/aangina-elW.jpg" width="1649" height="411" alt="West elevation" loading="lazy" decoding="async"></button><figcaption>West elevation</figcaption></figure></div></div></article><article class="chapter" id="wellness"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>ARC 501</span></p><h2>Wellness Centre at Gol Talab</h2><p class="ch-sub">A brick wellness centre in the historic fabric of Old Dhaka</p></div><dl class="facts"><dt>Studio</dt><dd>ARC 501</dd><dt>Site</dt><dd>Gol Talab, Old Dhaka</dd><dt>Context</dt><dd>Near Ahsan Manzil, the Buriganga and Islampur</dd><dt>Acknowledged</dt><dd>Abul Fazal Mahmudun Nobi, Mahmudul Islam Chowdhury</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>A wellness centre on the edge of Gol Talab in Old Dhaka, close to Ahsan Manzil, the Buriganga and the Islampur riverport. The site study began with how people already reach the water. Inner paths and gaps between buildings lead to the open void of Gol Talab, used mostly by residents and workers for bathing and washing, apart from the commercial traffic of Islampur Road.</p><p>Two brick building groups are organised around planted courtyards and linked at upper level by an arcaded, planted bridge, over a basement car park. Materials follow a survey of the surroundings: exposed brick, painted and lime plaster, timber doors and windows. At concept stage, an AI-assisted workshop (inpainting and LoRA conditioning on a site photograph) was used to explore massing in context.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="Sectional perspective through both building groups and the connecting bridge" aria-label="Enlarge: Sectional perspective through both building groups and the connecting bridge"><img src="img/well-persp.jpg" width="2000" height="1160" alt="Sectional perspective through both building groups and the connecting bridge" loading="lazy" decoding="async"></button><figcaption>Sectional perspective through both building groups and the connecting bridge</figcaption></figure></div><h3 class="grp-h">Renders</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Brick facades seen across the water" aria-label="Enlarge: Brick facades seen across the water"><img src="img/well-r1.jpg" width="1096" height="711" alt="Brick facades seen across the water" loading="lazy" decoding="async"></button><figcaption>Brick facades seen across the water</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Arched brick openings beside a perforated panel" aria-label="Enlarge: Arched brick openings beside a perforated panel"><img src="img/well-r2.jpg" width="1116" height="711" alt="Arched brick openings beside a perforated panel" loading="lazy" decoding="async"></button><figcaption>Arched brick openings beside a perforated panel</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Arcaded bridge between the two building groups" aria-label="Enlarge: Arcaded bridge between the two building groups"><img src="img/well-r3.jpg" width="1096" height="716" alt="Arcaded bridge between the two building groups" loading="lazy" decoding="async"></button><figcaption>Arcaded bridge between the two building groups</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Hall lit through a perforated brick screen" aria-label="Enlarge: Hall lit through a perforated brick screen"><img src="img/well-r4.jpg" width="1116" height="716" alt="Hall lit through a perforated brick screen" loading="lazy" decoding="async"></button><figcaption>Hall lit through a perforated brick screen</figcaption></figure></div><h3 class="grp-h">Plans</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Ground floor plan, with courtyards, pools and the riverside road" aria-label="Enlarge: Ground floor plan, with courtyards, pools and the riverside road"><img src="img/well-ground.jpg" width="2000" height="1215" alt="Ground floor plan, with courtyards, pools and the riverside road" loading="lazy" decoding="async"></button><figcaption>Ground floor plan, with courtyards, pools and the riverside road</figcaption></figure></div><h3 class="grp-h">Upper floors</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="First floor plan" aria-label="Enlarge: First floor plan"><img src="img/well-first.jpg" width="1780" height="993" alt="First floor plan" loading="lazy" decoding="async"></button><figcaption>First floor plan</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Second floor plan, with the planted bridge" aria-label="Enlarge: Second floor plan, with the planted bridge"><img src="img/well-second.jpg" width="1800" height="987" alt="Second floor plan, with the planted bridge" loading="lazy" decoding="async"></button><figcaption>Second floor plan, with the planted bridge</figcaption></figure></div><h3 class="grp-h">Sections</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Sections AA&#x27; and BB&#x27;" aria-label="Enlarge: Sections AA&#x27; and BB&#x27;"><img src="img/well-sections.jpg" width="1994" height="1154" alt="Sections AA&#x27; and BB&#x27;" loading="lazy" decoding="async"></button><figcaption>Sections AA&#x27; and BB&#x27;</figcaption></figure></div><h3 class="grp-h">Site and process</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Site and key surrounding features: Ahsan Manzil, the Buriganga, Babu Bazar and Islampur" aria-label="Enlarge: Site and key surrounding features: Ahsan Manzil, the Buriganga, Babu Bazar and Islampur"><img src="img/well-site.jpg" width="1434" height="898" alt="Site and key surrounding features: Ahsan Manzil, the Buriganga, Babu Bazar and Islampur" loading="lazy" decoding="async"></button><figcaption>Site and key surrounding features: Ahsan Manzil, the Buriganga, Babu Bazar and Islampur</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Permeability: inner paths converge on the open void of Gol Talab" aria-label="Enlarge: Permeability: inner paths converge on the open void of Gol Talab"><img src="img/well-porosity.jpg" width="747" height="572" alt="Permeability: inner paths converge on the open void of Gol Talab" loading="lazy" decoding="async"></button><figcaption>Permeability: inner paths converge on the open void of Gol Talab</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Building material index of the surroundings" aria-label="Enlarge: Building material index of the surroundings"><img src="img/well-material.jpg" width="1168" height="822" alt="Building material index of the surroundings" loading="lazy" decoding="async"></button><figcaption>Building material index of the surroundings</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Concept-stage image from the AI workshop. An image study, not a design drawing" aria-label="Enlarge: Concept-stage image from the AI workshop. An image study, not a design drawing"><img src="img/well-ai.jpg" width="960" height="587" alt="Concept-stage image from the AI workshop. An image study, not a design drawing" loading="lazy" decoding="async"></button><figcaption>Concept-stage image from the AI workshop. An image study, not a design drawing</figcaption></figure></div></div></article><article class="chapter" id="kaundia"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>ARC 401</span></p><h2>Water Urbanism at Kaundia</h2><p class="ch-sub">Community-based water urbanism on the peri-urban edge of Dhaka</p></div><dl class="facts"><dt>Studio</dt><dd>ARC 401</dd><dt>Site</dt><dd>Kaundia, Savar, Dhaka</dd><dt>Scale</dt><dd>Settlement, neighbourhood and building</dd><dt>Group work</dt><dd>Vision framework by Group 5(B)</dd><dt>Acknowledged</dt><dd>Khondaker Hasibul Kabir, Khurshid Zabin Hossain Taufique, Imon Chowdhooree, Tasfin Aziz, Ruaida Akter</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>Kaundia is a small union in Savar, west of Dhaka near the Turag River, where farmland and spreading settlement meet rivers, canals and floodplains. The studio asked how this edge can grow while keeping its water systems intact. Mapping from 2010 to 2025 shows the land and water pattern changing, with flooding, poor drainage and unplanned growth as the main pressures.</p><p>Group 5(B) set a vision for a resilient urban edge with better connectivity, richer biodiversity and improved health facilities: new roads, bridges and ghat-to-ghat links, floating farming, urban parks and distributed healthcare. The settlement master plan adds wet markets, ghats, waste management, sports and wellness centres, a boatmaking and exhibition zone and social spaces. At neighbourhood scale, a sports club for a low-income community offers coaching, equipment access and workshops beside the playing field, with green terraces, street markets and natural ventilation.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="Land, water and settlement at Kaundia" aria-label="Enlarge: Land, water and settlement at Kaundia"><img src="img/kaundia-cover.jpg" width="1100" height="1580" alt="Land, water and settlement at Kaundia" loading="lazy" decoding="async"></button><figcaption>Land, water and settlement at Kaundia</figcaption></figure></div><h3 class="grp-h">Reading the edge</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Land, water and built-up area, 2010 to 2025" aria-label="Enlarge: Land, water and built-up area, 2010 to 2025"><img src="img/kaundia-time.jpg" width="1050" height="1473" alt="Land, water and built-up area, 2010 to 2025" loading="lazy" decoding="async"></button><figcaption>Land, water and built-up area, 2010 to 2025</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Group 5(B) vision: connectivity, biodiversity and health across the river-edge settlements" aria-label="Enlarge: Group 5(B) vision: connectivity, biodiversity and health across the river-edge settlements"><img src="img/kaundia-vision.jpg" width="1171" height="1190" alt="Group 5(B) vision: connectivity, biodiversity and health across the river-edge settlements" loading="lazy" decoding="async"></button><figcaption>Group 5(B) vision: connectivity, biodiversity and health across the river-edge settlements</figcaption></figure></div><h3 class="grp-h">Master plans</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="Settlement master plan with interventions A to D" aria-label="Enlarge: Settlement master plan with interventions A to D"><img src="img/kaundia-master.jpg" width="1064" height="1511" alt="Settlement master plan with interventions A to D" loading="lazy" decoding="async"></button><figcaption>Settlement master plan with interventions A to D</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Neighbourhood master plan with the sports club and waterfront" aria-label="Enlarge: Neighbourhood master plan with the sports club and waterfront"><img src="img/kaundia-nbh.jpg" width="1171" height="1582" alt="Neighbourhood master plan with the sports club and waterfront" loading="lazy" decoding="async"></button><figcaption>Neighbourhood master plan with the sports club and waterfront</figcaption></figure></div><h3 class="grp-h">Sports club</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="Ground floor plan" aria-label="Enlarge: Ground floor plan"><img src="img/kaundia-ground.jpg" width="1260" height="1226" alt="Ground floor plan" loading="lazy" decoding="async"></button><figcaption>Ground floor plan</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="First floor plan" aria-label="Enlarge: First floor plan"><img src="img/kaundia-first.jpg" width="962" height="698" alt="First floor plan" loading="lazy" decoding="async"></button><figcaption>First floor plan</figcaption></figure></div><h3 class="grp-h">Sections and elevations</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Sections and street elevations" aria-label="Enlarge: Sections and street elevations"><img src="img/kaundia-sections.jpg" width="1102" height="675" alt="Sections and street elevations" loading="lazy" decoding="async"></button><figcaption>Sections and street elevations</figcaption></figure></div><h3 class="grp-h">Renders</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Terrace and perforated brick wall under a steel roof" aria-label="Enlarge: Terrace and perforated brick wall under a steel roof"><img src="img/kaundia-r1.jpg" width="1116" height="743" alt="Terrace and perforated brick wall under a steel roof" loading="lazy" decoding="async"></button><figcaption>Terrace and perforated brick wall under a steel roof</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Club building and playing field" aria-label="Enlarge: Club building and playing field"><img src="img/kaundia-r2.jpg" width="1116" height="743" alt="Club building and playing field" loading="lazy" decoding="async"></button><figcaption>Club building and playing field</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Path with market stalls" aria-label="Enlarge: Path with market stalls"><img src="img/kaundia-r3.jpg" width="1116" height="709" alt="Path with market stalls" loading="lazy" decoding="async"></button><figcaption>Path with market stalls</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Club seen from the field edge" aria-label="Enlarge: Club seen from the field edge"><img src="img/kaundia-r4.jpg" width="1116" height="709" alt="Club seen from the field edge" loading="lazy" decoding="async"></button><figcaption>Club seen from the field edge</figcaption></figure></div></div></article><article class="chapter" id="sylvan"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>ARC 302</span></p><h2>Sylvan Skyscraper</h2><p class="ch-sub">A high-rise grown from the form of a tree</p></div><dl class="facts"><dt>Studio</dt><dd>ARC 302</dd><dt>Site</dt><dd>Site 1, DNCC Market, Gulshan 1, Dhaka</dd><dt>Programme</dt><dd>High-rise</dd><dt>Faculty</dt><dd>Abul Fazal Mahmudun Nobi, Atiqur Rahman, Nabi Nawaz Khan, Tanveer Ahmed</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>Sylvan Skyscraper starts from a tree: a cluster of circles lifted into cylinders of different heights, joined by a podium. The tallest volume shifts its floor plates as it rises, opening planted terraces, while columns lift the lower volumes and leave the ground level open. The site is the DNCC Market in Gulshan 1.</p><p>Site analysis of the existing market recorded visitor numbers by day and hour, how space is used, noise (77 to 109 dB near the road, 65 to 74 dB inside) and traffic. Men&#x27;s clothing was the largest use, with garments and godowns next, and the poorly lit, poorly ventilated areas were read as wasted space. A case study of the HSBC Tower in Hong Kong, by Norman Foster, looked at its mast, truss and suspended-floor structure.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="The tower and its lower volume from the street" aria-label="Enlarge: The tower and its lower volume from the street"><img src="img/sylvan-hero.jpg" width="1543" height="1944" alt="The tower and its lower volume from the street" loading="lazy" decoding="async"></button><figcaption>The tower and its lower volume from the street</figcaption></figure></div><h3 class="grp-h">Renders</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Tower base and planted terraces" aria-label="Enlarge: Tower base and planted terraces"><img src="img/sylvan-r1.jpg" width="839" height="1188" alt="Tower base and planted terraces" loading="lazy" decoding="async"></button><figcaption>Tower base and planted terraces</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Aerial view of the tower, lower drum and plaza" aria-label="Enlarge: Aerial view of the tower, lower drum and plaza"><img src="img/sylvan-r4.jpg" width="710" height="1067" alt="Aerial view of the tower, lower drum and plaza" loading="lazy" decoding="async"></button><figcaption>Aerial view of the tower, lower drum and plaza</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Columns lifting the podium over the entry court" aria-label="Enlarge: Columns lifting the podium over the entry court"><img src="img/sylvan-r2.jpg" width="1569" height="999" alt="Columns lifting the podium over the entry court" loading="lazy" decoding="async"></button><figcaption>Columns lifting the podium over the entry court</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Terraces above the podium" aria-label="Enlarge: Terraces above the podium"><img src="img/sylvan-r5.jpg" width="776" height="1117" alt="Terraces above the podium" loading="lazy" decoding="async"></button><figcaption>Terraces above the podium</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="The tower from the street corner" aria-label="Enlarge: The tower from the street corner"><img src="img/sylvan-r3.jpg" width="839" height="1067" alt="The tower from the street corner" loading="lazy" decoding="async"></button><figcaption>The tower from the street corner</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Physical model of the tower and lower volume" aria-label="Enlarge: Physical model of the tower and lower volume"><img src="img/sylvan-model.jpg" width="828" height="2219" alt="Physical model of the tower and lower volume" loading="lazy" decoding="async"></button><figcaption>Physical model of the tower and lower volume</figcaption></figure></div><h3 class="grp-h">Concept and massing</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Concept: tree, circles, cylinders, composed form" aria-label="Enlarge: Concept: tree, circles, cylinders, composed form"><img src="img/sylvan-concept.jpg" width="1226" height="223" alt="Concept: tree, circles, cylinders, composed form" loading="lazy" decoding="async"></button><figcaption>Concept: tree, circles, cylinders, composed form</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Ground floor plan, Site 1, DNCC Market" aria-label="Enlarge: Ground floor plan, Site 1, DNCC Market"><img src="img/sylvan-ground.jpg" width="1458" height="760" alt="Ground floor plan, Site 1, DNCC Market" loading="lazy" decoding="async"></button><figcaption>Ground floor plan, Site 1, DNCC Market</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Massing study" aria-label="Enlarge: Massing study"><img src="img/sylvan-massing.jpg" width="921" height="571" alt="Massing study" loading="lazy" decoding="async"></button><figcaption>Massing study</figcaption></figure></div><h3 class="grp-h">Plans</h3><div class="pair"><figure class="plate"><button class="open" type="button" data-cap="Ground floor, 5th to 7th floor, 12th and 13th floor" aria-label="Enlarge: Ground floor, 5th to 7th floor, 12th and 13th floor"><img src="img/sylvan-plans-a.jpg" width="1145" height="1948" alt="Ground floor, 5th to 7th floor, 12th and 13th floor" loading="lazy" decoding="async"></button><figcaption>Ground floor, 5th to 7th floor, 12th and 13th floor</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="10th floor, 11th floor, 13th floor and basement" aria-label="Enlarge: 10th floor, 11th floor, 13th floor and basement"><img src="img/sylvan-plans-b.jpg" width="1145" height="1679" alt="10th floor, 11th floor, 13th floor and basement" loading="lazy" decoding="async"></button><figcaption>10th floor, 11th floor, 13th floor and basement</figcaption></figure></div><h3 class="grp-h">Case study</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="HSBC Tower, Hong Kong: mast, truss, cantilever and skin" aria-label="Enlarge: HSBC Tower, Hong Kong: mast, truss, cantilever and skin"><img src="img/sylvan-hsbc.jpg" width="1199" height="322" alt="HSBC Tower, Hong Kong: mast, truss, cantilever and skin" loading="lazy" decoding="async"></button><figcaption>HSBC Tower, Hong Kong: mast, truss, cantilever and skin</figcaption></figure></div></div></article><article class="chapter" id="studio-301"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>ARC 301</span></p><h2>Interpretation and Edutainment</h2><p class="ch-sub">Two short projects: a nature interpretation centre and a children&#x27;s edutainment centre</p></div><dl class="facts"><dt>Studio</dt><dd>ARC 301, Spring 2023</dd><dt>Sites</dt><dd>Lakshmipur; Mohakhali TB Gate, Dhaka</dd><dt>Duration</dt><dd>Four weeks and six weeks</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>The Nature Interpretation Centre (four weeks, Lakshmipur) places small circular pavilions in a palm grove at the water&#x27;s edge, reached by one winding path. Interpretation centres share knowledge of natural and cultural heritage through exhibitions and interactive, multimedia programmes, and the path was tested in physical models.</p><p>The Edutainment Centre (six weeks, Mohakhali TB Gate) is a place for children to learn through exploration, discovery and imagination. A multipurpose hall and auditorium, exhibition hall, learning spaces and a rooftop café are arranged around planted courtyards, with a perforated wall on the east facade and ramps and stairs linking the levels beside the water.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="Edutainment Centre: upper floors cantilevered over the entry slope" aria-label="Enlarge: Edutainment Centre: upper floors cantilevered over the entry slope"><img src="img/edu-r2.jpg" width="640" height="359" alt="Edutainment Centre: upper floors cantilevered over the entry slope" loading="lazy" decoding="async"></button><figcaption>Edutainment Centre: upper floors cantilevered over the entry slope</figcaption></figure></div><h3 class="grp-h">Nature Interpretation Centre, Lakshmipur<span>Four weeks</span></h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Master plan: a winding path through the grove to pavilions at the water" aria-label="Enlarge: Master plan: a winding path through the grove to pavilions at the water"><img src="img/nature-plan.jpg" width="1070" height="747" alt="Master plan: a winding path through the grove to pavilions at the water" loading="lazy" decoding="async"></button><figcaption>Master plan: a winding path through the grove to pavilions at the water</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Site photographs" aria-label="Enlarge: Site photographs"><img src="img/nature-site.jpg" width="426" height="740" alt="Site photographs" loading="lazy" decoding="async"></button><figcaption>Site photographs</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Site model with the winding path" aria-label="Enlarge: Site model with the winding path"><img src="img/nature-model-a.jpg" width="600" height="479" alt="Site model with the winding path" loading="lazy" decoding="async"></button><figcaption>Site model with the winding path</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Site model, pavilions and path" aria-label="Enlarge: Site model, pavilions and path"><img src="img/nature-model-b.jpg" width="605" height="412" alt="Site model, pavilions and path" loading="lazy" decoding="async"></button><figcaption>Site model, pavilions and path</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Model, street-side view" aria-label="Enlarge: Model, street-side view"><img src="img/nature-model-c.jpg" width="409" height="412" alt="Model, street-side view" loading="lazy" decoding="async"></button><figcaption>Model, street-side view</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Model, interior and ramp" aria-label="Enlarge: Model, interior and ramp"><img src="img/nature-model-d.jpg" width="492" height="412" alt="Model, interior and ramp" loading="lazy" decoding="async"></button><figcaption>Model, interior and ramp</figcaption></figure></div><h3 class="grp-h">Edutainment Centre, Mohakhali TB Gate<span>Six weeks</span></h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Site plan beside the water" aria-label="Enlarge: Site plan beside the water"><img src="img/edu-site.jpg" width="1473" height="1674" alt="Site plan beside the water" loading="lazy" decoding="async"></button><figcaption>Site plan beside the water</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Long brick-coloured facade beside the water" aria-label="Enlarge: Long brick-coloured facade beside the water"><img src="img/edu-r1.jpg" width="830" height="259" alt="Long brick-coloured facade beside the water" loading="lazy" decoding="async"></button><figcaption>Long brick-coloured facade beside the water</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Perforated wall and a shaded corridor" aria-label="Enlarge: Perforated wall and a shaded corridor"><img src="img/edu-r3.jpg" width="830" height="465" alt="Perforated wall and a shaded corridor" loading="lazy" decoding="async"></button><figcaption>Perforated wall and a shaded corridor</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Courtyard around a retained tree" aria-label="Enlarge: Courtyard around a retained tree"><img src="img/edu-r4.jpg" width="640" height="356" alt="Courtyard around a retained tree" loading="lazy" decoding="async"></button><figcaption>Courtyard around a retained tree</figcaption></figure></div><h3 class="grp-h">Sections</h3><div class="stack"><figure class="plate"><button class="open" type="button" data-cap="Sections: rooftop café, learning space, exhibition hall, multipurpose hall and auditorium" aria-label="Enlarge: Sections: rooftop café, learning space, exhibition hall, multipurpose hall and auditorium"><img src="img/edu-sections.jpg" width="1472" height="451" alt="Sections: rooftop café, learning space, exhibition hall, multipurpose hall and auditorium" loading="lazy" decoding="async"></button><figcaption>Sections: rooftop café, learning space, exhibition hall, multipurpose hall and auditorium</figcaption></figure></div></div></article><article class="chapter" id="interior"><div class="wrap"><header class="grid ch-head"><div class="ch-title"><p class="ch-code"><span>Interior</span></p><h2>Café and Lounge Interior</h2><p class="ch-sub">Interior architecture study</p></div><dl class="facts"><dt>Type</dt><dd>Interior design</dd><dt>Programme</dt><dd>Café, bar and lounge</dd><dt>Materials</dt><dd>Brick, timber, planting</dd></dl></header><div class="grid ch-lead"><div class="statement"><p>An interior study for a café and lounge. Exposed brick columns and a timber deck floor set the tone under a suspended ceiling grid. Screens of timber poles, hanging climbers and planters divide the floor into seating zones, with a colour-banded bar, a reading corner with shelves beside the stair, and a graphic feature wall.</p></div><figure class="lead-fig plate"><button class="open" type="button" data-cap="Café seating, planters and the bar" aria-label="Enlarge: Café seating, planters and the bar"><img src="img/interior-2.jpg" width="1653" height="925" alt="Café seating, planters and the bar" loading="lazy" decoding="async"></button><figcaption>Café seating, planters and the bar</figcaption></figure></div><h3 class="grp-h">Views</h3><div class="masonry"><figure class="plate"><button class="open" type="button" data-cap="Entry and stair, with timber screens between the brick columns" aria-label="Enlarge: Entry and stair, with timber screens between the brick columns"><img src="img/interior-1.jpg" width="1653" height="925" alt="Entry and stair, with timber screens between the brick columns" loading="lazy" decoding="async"></button><figcaption>Entry and stair, with timber screens between the brick columns</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Lounge seating" aria-label="Enlarge: Lounge seating"><img src="img/interior-4.jpg" width="1653" height="925" alt="Lounge seating" loading="lazy" decoding="async"></button><figcaption>Lounge seating</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Seating beneath the brick columns" aria-label="Enlarge: Seating beneath the brick columns"><img src="img/interior-3.jpg" width="1653" height="925" alt="Seating beneath the brick columns" loading="lazy" decoding="async"></button><figcaption>Seating beneath the brick columns</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Timber screens along the circulation line" aria-label="Enlarge: Timber screens along the circulation line"><img src="img/interior-7.jpg" width="1653" height="925" alt="Timber screens along the circulation line" loading="lazy" decoding="async"></button><figcaption>Timber screens along the circulation line</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Lounge and planted screens" aria-label="Enlarge: Lounge and planted screens"><img src="img/interior-5.jpg" width="1653" height="925" alt="Lounge and planted screens" loading="lazy" decoding="async"></button><figcaption>Lounge and planted screens</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Bar counter and seating" aria-label="Enlarge: Bar counter and seating"><img src="img/interior-6.jpg" width="1653" height="925" alt="Bar counter and seating" loading="lazy" decoding="async"></button><figcaption>Bar counter and seating</figcaption></figure><figure class="plate"><button class="open" type="button" data-cap="Reading corner with shelves beside the stair" aria-label="Enlarge: Reading corner with shelves beside the stair"><img src="img/interior-8.jpg" width="1653" height="925" alt="Reading corner with shelves beside the stair" loading="lazy" decoding="async"></button><figcaption>Reading corner with shelves beside the stair</figcaption></figure></div></div></article>
+
+  <section class="wrap section" id="about" aria-label="About">
+    <div class="sec-h"><h2>About</h2><span class="jp" lang="ja">プロフィール</span></div>
+    <div class="grid about">
+      <figure class="portrait"><img src="img/portrait.jpg" width="900" height="900" alt="Portrait of Robiul Kawser" loading="lazy" decoding="async"></figure>
+      <div class="about-text">
+        <p class="intro">Hi, I'm Robiul Kawser, an architecture student at BRAC University in Dhaka. I look at how people, spaces and the built environment shape one another, with a steady interest in contextual architecture, community engagement and sustainable design.</p>
+        <p>I treat architecture as a process of understanding people, place and context. A good building does more than look right. It answers environmental pressures, carries cultural identity and serves the everyday needs of the people who use it. I aim to make architecture that is functional, responsive and meaningful.</p>
+        <div class="about-cols">
+          <div>
+            <h3>Architectural interests</h3>
+            <ul>
+              <li>Contextual architecture</li>
+              <li>Sustainable architecture</li>
+              <li>Community-oriented design</li>
+              <li>Urban design and urbanism</li>
+              <li>Cultural architecture</li>
+              <li>Institutional architecture</li>
+              <li>Interior architecture</li>
+              <li>Architectural visualisation</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <p>Architecture, BRAC University, Dhaka, Bangladesh. Studios shown here: ARC 301, 302, 401, 402 and 501.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-h" style="margin-top: clamp(3.5rem, 7vw, 6rem)"><h2>Ways of working</h2></div>
+    <div class="ways">
+      <div class="way"><h3>Reading the site</h3><p>Mapping land and water change, movement and permeability, building materials, noise and daily activity before drawing begins.</p></div>
+      <div class="way"><h3>Developing form</h3><p>Concept diagrams, massing studies and physical models, used to test courtyards, terraces and paths.</p></div>
+      <div class="way"><h3>Drawing</h3><p>Plans, sections, elevations and sectional perspectives, supported by hand sketches of existing conditions.</p></div>
+      <div class="way"><h3>Visualising</h3><p>Architectural and interior renders, and an AI-assisted image workflow explored in ARC 501.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="wrap">
+      <div class="sec-h"><h2>Contact</h2><span class="jp" lang="ja">連絡先</span></div>
+      <div class="grid contact-grid">
+        <p class="contact-lead">Open to internships and entry-level roles. Full studio portfolios are available as PDF on request.</p>
+        <div class="crows">
+          <div class="crow"><span class="clabel">Email</span><a class="cval" href="mailto:robiul.kawser@g.bracu.ac.bd">robiul.kawser@g.bracu.ac.bd</a><button class="copy" type="button" data-copy="robiul.kawser@g.bracu.ac.bd">Copy</button></div>
+          <div class="crow"><span class="clabel">Phone</span><a class="cval" href="tel:+8801845263501">+880 1845-263501</a><button class="copy" type="button" data-copy="+880 1845-263501">Copy</button></div>
+          <div class="crow"><span class="clabel">Location</span><span class="cval">Dhaka, Bangladesh</span></div>
+        </div>
+      </div>
+      <div class="foot"><span>Robiul Kawser, architectural designer. 2026</span><a href="#top">Back to top</a></div>
+    </div>
+  </section>
+</main>
+
+<img id="peek" class="peek" alt="" aria-hidden="true">
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <div class="lb-bar">
+    <span id="lb-count"></span>
+    <div class="lb-btns">
+      <button type="button" id="lb-prev">Previous</button>
+      <button type="button" id="lb-next">Next</button>
+      <button type="button" id="lb-close">Close</button>
+    </div>
+  </div>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
+<script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* Index: image follows the pointer on desktop */
+  var peek = $('#peek');
+  if (peek && window.matchMedia('(hover: hover) and (min-width: 900px)').matches) {
+    $$('.row').forEach(function (row) {
+      row.addEventListener('mouseenter', function () {
+        peek.src = row.getAttribute('data-img');
+        peek.classList.add('on');
+      });
+      row.addEventListener('mousemove', function (e) {
+        var w = peek.offsetWidth, h = peek.offsetHeight;
+        var x = Math.min(e.clientX + 28, window.innerWidth - w - 16);
+        var y = Math.min(Math.max(e.clientY - h / 2, 70), window.innerHeight - h - 16);
+        peek.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      });
+      row.addEventListener('mouseleave', function () { peek.classList.remove('on'); });
+    });
+  }
+
+  /* Lightbox */
+  var lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap'), lbCount = $('#lb-count');
+  var list = [], idx = 0, lastFocus = null;
+  function show(i) {
+    idx = (i + list.length) % list.length;
+    var b = list[idx], img = $('img', b);
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = b.getAttribute('data-cap') || '';
+    lbCount.textContent = (idx + 1) + ' / ' + list.length;
+  }
+  function openLb(b) {
+    lastFocus = b;
+    list = $$('.open', b.closest('.chapter'));
+    show(list.indexOf(b));
+    lb.hidden = false;
+    document.body.classList.add('lb-open');
+    $('#lb-close').focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    document.body.classList.remove('lb-open');
+    lbImg.removeAttribute('src');
+    if (lastFocus) lastFocus.focus();
+  }
+  $$('.plate .open').forEach(function (b) { b.addEventListener('click', function () { openLb(b); }); });
+  $('#lb-close').addEventListener('click', closeLb);
+  $('#lb-prev').addEventListener('click', function () { show(idx - 1); });
+  $('#lb-next').addEventListener('click', function () { show(idx + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-stage')) closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowLeft') show(idx - 1);
+    else if (e.key === 'ArrowRight') show(idx + 1);
+    else if (e.key === 'Tab') {
+      var f = $$('button', lb);
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  /* Copy buttons */
+  $$('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function (msg) {
+        btn.textContent = msg;
+        setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+      };
+      var fallback = function () {
+        var target = $('.cval', btn.closest('.crow'));
+        var r = document.createRange();
+        r.selectNodeContents(target);
+        var s = window.getSelection();
+        s.removeAllRanges();
+        s.addRange(r);
+        done('Selected');
+      };
+      try {
+        navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback);
+      } catch (err) { fallback(); }
+    });
+  });
+})();
+
+</script>
+
+</body></html>
